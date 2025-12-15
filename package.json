@@ -12,13 +12,16 @@
     "@types/node": "20.11.5",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
-    "next": "14.1.0",
+    "ai": "^5.0.113",
+    "next": "^14.2.35",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "zod": "^3.21.4",
+    "@google-ai/generativelanguage": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.0.10"
   }
 }

@@ -27,7 +27,7 @@ export default function AiTestButton() {
   return (
     <div className="p-4">
       <Button onClick={handleClick} disabled={loading}>
-        {loading ? 'Testing AI...' : 'Test AI: CMYK for Red'}
+        {loading ? 'Testing AI...' : 'Test AI: CMYK for Blue'}
       </Button>
       {result && (
         <div className="mt-4 p-4 border rounded bg-green-50">

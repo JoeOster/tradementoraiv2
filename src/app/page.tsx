@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { aiTest } from '@/app/actions/ai-test';
 
 export default function Home() {
   const [aiResponse, setAiResponse] = useState<string | null>(null);
@@ -9,8 +8,17 @@ export default function Home() {
 
   const handleAiTest = async () => {
     setLoading(true);
-    const response = await aiTest();
-    setAiResponse(response || 'No response from AI.');
+    try {
+      const res = await fetch('/api/ai-test');
+      const json = await res.json();
+      if (json.success) {
+        setAiResponse(JSON.stringify(json.data));
+      } else {
+        setAiResponse(json.error || 'No response from AI.');
+      }
+    } catch (e: any) {
+      setAiResponse(e?.message || 'Request failed');
+    }
     setLoading(false);
   };
 

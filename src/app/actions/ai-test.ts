@@ -1,6 +1,6 @@
 'use server';
 
-import { queryGemini } from '@/lib/ai-engine';
+import { queryGemini } from '../../lib/ai-engine';
 import { z } from 'zod';
 
 const aiTestSchema = z.object({
